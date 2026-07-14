@@ -1,0 +1,152 @@
+date,region,destination_country,origin_port,destination_port,carrier,forwarder,trade_type,freight_rate,route
+2025-04-21,S.A.,Panama,NH,Manzanilo,Evergreen,Kotak Global,ROW,3350.0,NH → Manzanilo
+2025-04-21,MEA,Sudan,NH,Sudan Port,Transmar,Hind Freight,ROW,2050.0,NH → Sudan Port
+2025-04-22,Europe,United Kingdom,ICD,London Gateway,Hapag,Transbox,ROW,1325.0,ICD → London Gateway
+2025-04-26,Europe,Germany,ICD,ROTTERDAM,Hapag,Hellmann,ROW,1200.0,ICD → ROTTERDAM
+2025-04-27,Europe,United Kingdom,ICD,London Gateway,Hapag,Transbox,ROW,1325.0,ICD → London Gateway
+2025-04-27,Europe,Germany,ICD,Dublin,Hapag,Hellmann,ROW,1650.0,ICD → Dublin
+2025-04-28,MEA,Iraq,ICD,Umm Qasr,Hapag,DP World,ROW,950.0,ICD → Umm Qasr
+2025-05-11,MEA,South Africa,NH,Durban,CMA,Hellmann,ROW,989.0,NH → Durban
+2025-05-17,Europe,United Kingdom,ICD,London Gateway,Hapag,Kotak Global,ROW,1050.0,ICD → London Gateway
+2025-05-17,Europe,Germany,NH,Rotterdam,Hapag,Hellmann,ROW,1100.0,NH → Rotterdam
+2025-05-26,Europe,United Kingdom,Tihi,London Gateway,Hapag,Kotak Global,ROW,1050.0,Tihi → London Gateway
+2025-05-28,Europe,United Kingdom,NH,London Gateway,Hapag,Kotak Global,ROW,1050.0,NH → London Gateway
+2025-06-10,S.A,columbia,ICD,Buenaventura,Maersk,Sanjay Forwarder,ROW,2450.0,ICD → Buenaventura
+2025-06-11,Europe,Turkey,ICD,Aliaga,Hapag,Hellmann,ROW,1235.0,ICD → Aliaga
+2025-06-16,S.A,columbia,NH,Buenaventura,Maersk,Sanjay Forwarder,ROW,2450.0,NH → Buenaventura
+2025-06-20,MEA,kuwait,ICD,Shuwaikh,Maersk,DP World,ROW,485.0,ICD → Shuwaikh
+2025-06-21,Europe,Ireland,NH,Dublin,COSCO,Hind Freight,ROW,1500.0,NH → Dublin
+2025-06-25,Europe,Germany,Tihi,Rotterdam,HMM,Sevenseas Global,ROW,1200.0,Tihi → Rotterdam
+2025-06-26,Europe,Germany,Tihi,Rotterdam,HMM,Sevenseas Global,ROW,1200.0,Tihi → Rotterdam
+2025-06-28,S.A,Puerto Rico,ICD,,Hapag,Transbox,ROW,3600.0,
+2025-07-13,MEA,South Africa,ICD,Durban,Maersk,Sevenseas Global,ROW,695.0,ICD → Durban
+2025-07-18,Europe,UK,NH,London Gateway,Maersk,Sevenseas Global,ROW,1550.0,NH → London Gateway
+2025-07-19,S.A,Mexico,Tihi,Manzanillo,Maersk,Sanjay Forwarder,ROW,2650.0,Tihi → Manzanillo
+2025-07-19,MEA,kuwait,NH,Shuaiba,OOCL,Sevenseas Global,ROW,648.0,NH → Shuaiba
+2025-07-19,S.A,Bulgaria,ICD,Burgas,Hapag,Infinity Ocean,ROW,2150.0,ICD → Burgas
+2025-07-23,S.A,Mexico,NH,Manzanillo,Evergreen,Sanjay Forwarder,ROW,2650.0,NH → Manzanillo
+2025-07-24,MEA,South Africa,ICD,Durban,Maersk,Sevenseas Global,ROW,675.0,ICD → Durban
+2025-07-25,Europe,UK,NH,London Gateway,Hapag,Hellmann,ROW,1640.0,NH → London Gateway
+2025-07-26,Europe,Ireland,NH,Dublin,Hapag,Hellmann,ROW,1100.0,NH → Dublin
+2025-07-26,S.A,Peru,NH,CALLAO,Evergreen,Sevenseas Global,ROW,2495.0,NH → CALLAO
+2025-07-30,S.A,Brazil,ICD,Paranagua,CMA,Transbox,ROW,2100.0,ICD → Paranagua
+2025-07-31,MEA,South Africa,NH,Durban,Maersk,Sevenseas Global,ROW,1100.0,NH → Durban
+2025-07-31,Europe,UK,NH,London Gateway,Maersk,Transbox,ROW,2070.0,NH → London Gateway
+2025-08-06,Europe,Ireland,ICD,Dublin,MSC,Sevenseas Global,ROW,2400.0,ICD → Dublin
+2025-08-07,S.A,Brazil,NH,Paranagua,CMA,Sanjay Forwarder,ROW,2100.0,NH → Paranagua
+2025-08-11,Europe,Ireland,ICD,Dublin,Maersk,Sevenseas Global,ROW,2400.0,ICD → Dublin
+2025-08-16,S.A,Peru,NH,CALLAO,Evergreen,Sevenseas Global,ROW,2625.0,NH → CALLAO
+2025-08-21,MEA,Kuwait,NH,Shuaiba,OOCL,Hind Freight,ROW,575.0,NH → Shuaiba
+2025-08-22,Europe,UK,NH,London Gateway,Hapag,Hellmann,ROW,1625.0,NH → London Gateway
+2025-08-24,MEA,South Africa,ICD,Durban,Maersk,Sevenseas Global,ROW,1400.0,ICD → Durban
+2025-08-29,Europe,UK,NH,London Gateway,Hapag,Hellmann,ROW,1625.0,NH → London Gateway
+2025-08-31,S.A,Columbia,NH,Buenaventura,Maersk,Sanjay Forwarder,ROW,2550.0,NH → Buenaventura
+2025-08-31,Europe,Bulgaria,NH,Thessaloniki,Evergreen,Sevenseas Global,ROW,4404.0,NH → Thessaloniki
+2025-09-03,S.A,Mexico,NH,"Manzanillo, MX",Maersk,Sanjay Forwarder,ROW,2650.0,"NH → Manzanillo, MX"
+2025-09-03,S.A,Panama,ICD,Colon Free Zone,Maersk,Sanjay Forwarder,ROW,2850.0,ICD → Colon Free Zone
+2025-09-05,MEA,Kuwait,NH,Shuaiba,OOCL,Hind Freight,ROW,600.0,NH → Shuaiba
+2025-09-11,S.A,Columbia,ICD,Buenaventura,Maersk,Sanjay Forwarder,ROW,2550.0,ICD → Buenaventura
+2025-09-15,Europe,UK,ICD,London Gateway,Hapag,Hellmann,ROW,1225.0,ICD → London Gateway
+2025-09-16,S.A,Panama,ICD,Colon Free Zone,Maersk,Sanjay Forwarder,ROW,2850.0,ICD → Colon Free Zone
+2025-09-19,Europe,Germany,NH,Rotterdam,Maersk,Sevenseas Global,ROW,1295.0,NH → Rotterdam
+2025-09-21,MEA,Saudi Arabia,NH,Riyadh,CMA,Transbox,ROW,1050.0,NH → Riyadh
+2025-09-27,Europe,Lithuania,ICD,Klaipeda,Hapag,Hellmann,ROW,1395.0,ICD → Klaipeda
+2025-09-27,MEA,South Africa,NH,DURBAN,CMA,Sevenseas Global,ROW,1060.0,NH → DURBAN
+2025-09-28,Europe,Poland,NH,Gdansk,Maersk,VR Logistics,ROW,1395.0,NH → Gdansk
+2025-09-29,ISC,Singapore,NH,Singapore,OOCL,Hellmann,ROW,5.0,NH → Singapore
+2025-09-30,Europe,Slovenia,TIHI,Koper,MSC,VR Logistics,ROW,1784.0,TIHI → Koper
+2025-10-10,MEA,Kuwait,NH,Shuwaikh,OOCL,Sevenseas Global,ROW,595.0,NH → Shuwaikh
+2025-10-10,Europe,UK,Tihi,London Gateway,Hapag,Hellmann,ROW,1100.0,Tihi → London Gateway
+2025-10-10,Europe,UK,NH,London Gateway,Hapag,Sevenseas Global,ROW,1100.0,NH → London Gateway
+2025-10-16,Europe,Ireland,NH,Dublin,Evergreen,Sevenseas Global,ROW,1650.0,NH → Dublin
+2025-10-18,MEA,Kuwait,NH,Shuwaikh,OOCL,Sevenseas Global,ROW,595.0,NH → Shuwaikh
+2025-10-19,S.A,Columbia,NH,Buenaventura,Maersk,Sanjay Forwarder,ROW,1885.0,NH → Buenaventura
+2025-10-22,MEA,Iraq,Tihi,Umm Qasr,CMA,Sevenseas Global,ROW,1050.0,Tihi → Umm Qasr
+2025-10-22,Europe,UK,Tihi,London Gateway,Hapag,Sevenseas Global,ROW,1100.0,Tihi → London Gateway
+2025-10-29,S.A,Paraguay,Tihi,Asuncion Port,Hapag,Sanjay Forwarder,ROW,3890.0,Tihi → Asuncion Port
+2025-11-22,S.A,Columbia,NH,Buenaventura,Maersk,Sanjay Forwarder,ROW,1935.0,NH → Buenaventura
+2025-11-26,MEA,Egypt,NH,Durban,MSC,DP World,ROW,1008.0,NH → Durban
+2025-11-28,S.A,Mexico,NH,Manzanillo,Maersk,Sanjay Forwarder,ROW,1840.0,NH → Manzanillo
+2025-12-13,S.A,Colombia,ICD,Buenaventura,CMA,Clearship,ROW,1490.0,ICD → Buenaventura
+2025-12-29,MEA,DI,NH,,Emirates,Hind Freight,ROW,975.0,
+2025-12-30,S.A,Paraguay,Tihi,Asuncion,MSC,DP WORLD,ROW,2290.0,Tihi → Asuncion
+2025-12-30,Europe,UK,ICD,London Gateway,Hapag,Hellmann,ROW,1095.0,ICD → London Gateway
+2025-12-31,Europe,UK,NH,London Gateway,Hapag,Seven Seas,ROW,1095.0,NH → London Gateway
+2026-01-16,MEA,DI,NH,Jebel Ali,Unifeeder,DP World,ROW,225.0,NH → Jebel Ali
+2026-01-17,Oceania,Australia,NH,MELBOURNE,PIL,Hellmann,ROW,1860.0,NH → MELBOURNE
+2026-01-17,Oceania,Australia,NH,BRISBANE,PIL,Hellmann,ROW,1860.0,NH → BRISBANE
+2026-01-24,MEA,Kuwait,NH,Shuaiba,MSC,Hind Freight,ROW,660.0,NH → Shuaiba
+2026-01-24,ISC,Srilanka,NH,Colombo,CMA,Hellmann,ROW,475.0,NH → Colombo
+2026-01-25,ISC,Nepal,Road,Birganj,,BLR Logistics,ROW,120000.0,Road → Birganj
+2026-01-28,MEA,South Africa,NH,DURBAN,CMA,Sevenseas,ROW,1150.0,NH → DURBAN
+2026-01-29,MEA,Kuwait,NH,Shuwaikh,MSC,Hind Freight,ROW,660.0,NH → Shuwaikh
+2026-01-30,MEA,Kuwait,NH,Shuaiba,MSC,Hind Freight,ROW,660.0,NH → Shuaiba
+2026-01-31,Europe,Bulgaria,Tihi,THESSALONIKI,ONE,Clearship,ROW,1450.0,Tihi → THESSALONIKI
+2026-02-06,CIS,Russia,NH,NOVOROSSIYSK,Akkon,Prologis Freight,ROW,2790.0,NH → NOVOROSSIYSK
+2026-02-11,MEA,UAE,NH,Jebel Ali,Unifeeder,DP World,ROW,247.0,NH → Jebel Ali
+2026-02-12,CIS,Russia,NH,NOVOROSSIYSK,SJ line,Vaaridhi,ROW,3100.0,NH → NOVOROSSIYSK
+2026-02-15,S.A,Columbia,NH,Buenaventura,Maersk,Clearship,ROW,1550.0,NH → Buenaventura
+2026-02-15,S.A,Peru,NH,Callao,Maersk,Clearship,ROW,1525.0,NH → Callao
+2026-02-20,Oceania,Australia,NH,BRISBANE,PIL,Hellmann,ROW,1665.0,NH → BRISBANE
+2026-02-20,Oceania,Australia,NH,Melbourne,PIL,Hellmann,ROW,1665.0,NH → Melbourne
+2026-02-21,MEA,South Africa,NH,Durban,Hapag,Hellmann,ROW,1080.0,NH → Durban
+2026-02-22,CIS,Russia,NH,NOVOROSSIYSK,Silmar,Prologis Freight,ROW,3300.0,NH → NOVOROSSIYSK
+2026-02-24,CIS,Russia,NH,NOVOROSSIYSK,SJ Line,Vaaridhi,ROW,3300.0,NH → NOVOROSSIYSK
+2026-02-25,CIS,Russia,NH,NOVOROSSIYSK,Akkon,Prologis Freight,ROW,3300.0,NH → NOVOROSSIYSK
+2026-02-27,MEA,Saudi Arabia,NH,Dammam,OOCL,Hind Freight,ROW,450.0,NH → Dammam
+2026-02-27,MEA,South Africa,TIHI,Durban,Hapag,Hellmann,ROW,1080.0,TIHI → Durban
+2026-02-28,S.A,Panama,TIHI,Colon Free Zone,Maersk,Sanjay Forwarder,ROW,1850.0,TIHI → Colon Free Zone
+2026-02-28,S.A,Mexico,NH,Manzanillo,Emirates,Hellmann,ROW,1715.0,NH → Manzanillo
+2026-03-05,Oceania,Australia,NH,BRISBANE,PIL,Hellmann,ROW,1675.0,NH → BRISBANE
+2026-03-07,CIS,Russia,NH,NOVOROSSIYSK,FESCO,Prologis Freight,ROW,4300.0,NH → NOVOROSSIYSK
+2026-03-09,CIS,Russia,NH,NOVOROSSIYSK,Silmar,Prologis Freight,ROW,4300.0,NH → NOVOROSSIYSK
+2026-03-09,S.A,Panama,NH,Colon Free Zone,Maersk,Sanjay Forwarder,ROW,1850.0,NH → Colon Free Zone
+2026-03-11,CIS,Russia,NH,NOVOROSSIYSK,Corton,Prologis Freight,ROW,5000.0,NH → NOVOROSSIYSK
+2026-03-12,MEA,South Africa,Tihi,Durban,Hapag,Hellmann,ROW,1130.0,Tihi → Durban
+2026-03-13,CIS,Russia,NH,NOVOROSSIYSK,Econship,Vaaridhi,ROW,5000.0,NH → NOVOROSSIYSK
+2026-03-15,MEA,South Africa,Tihi,Durban,Hapag,Hellmann,ROW,1130.0,Tihi → Durban
+2026-03-17,MEA,South Africa,Tihi,Durban,Hapag,Hellmann,ROW,1130.0,Tihi → Durban
+2026-03-18,ISC,Sri Lanka,NH,Colombo,Cosco,Hellmann,ROW,235.0,NH → Colombo
+2026-03-22,Europe,Bulgaria,NH,Varna,ONE,SAR Transport,ROW,2027.0,NH → Varna
+2026-03-23,CIS,Russia,NH,NOVOROSSIYSK,Fesco,Prologis Freight,ROW,5000.0,NH → NOVOROSSIYSK
+2026-03-23,Oceania,Australia,NH,BRISBANE,ANL,Clearship,ROW,1675.0,NH → BRISBANE
+2026-03-23,Oceania,Australia,NH,Melbourne,ANL,Clearship,ROW,1675.0,NH → Melbourne
+2026-03-26,S.A,Mexico,NH,Manzanillo,Maersk,Sanjay Forwarder,ROW,1850.0,NH → Manzanillo
+2026-03-31,ISC,Nepal,,Birgunj,,RKY,ROW,120000.0,
+2026-04-11,Oceania,Australia,NH,Brisbane,ANL,Clearship,ROW,1690.0,NH → Brisbane
+2026-04-11,Oceania,Australia,NH,Melbourne,ANL,Clearship,ROW,1690.0,NH → Melbourne
+2026-04-15,CIS,Belarus,NH,Novorossiysk,10 Cubits,Somnath Shipping,ROW,4150.0,NH → Novorossiysk
+2026-04-16,CIS,Belarus,NH,Novorossiysk,10 Cubits,Somnath Shipping,ROW,4150.0,NH → Novorossiysk
+2026-04-16,Africa,South Africa,NH,Durban,Maersk,Hellmann,ROW,1230.0,NH → Durban
+2026-04-18,S.A.,Columbia,NH,Buenaventura,Maersk,Varridhi,ROW,2315.0,NH → Buenaventura
+2026-04-20,Europe,Bulgaria,NH,Varna,ONE,Hind Freight,ROW,2500.0,NH → Varna
+2026-04-23,MEA,Oman,NH,Sohar,MSC,DP World,ROW,2920.0,NH → Sohar
+2026-04-23,S.A.,Mexico,NH,Manzanillo,Maersk,Sanjay Forwarder,ROW,2350.0,NH → Manzanillo
+2026-04-26,Africa,South Africa,Tihi,Durban,CMA,Hind Freight,ROW,1350.0,Tihi → Durban
+2026-04-27,S.A.,Paraguay,Tihi,ASUNCION,MSC,VAARIDHI Logistics,ROW,3109.0,Tihi → ASUNCION
+2026-04-28,S.A.,Mexico,NH,Manzanillo,Maersk,Sanjay Forwarder,ROW,2350.0,NH → Manzanillo
+2026-04-28,Europe,Serbia,NH,Thessoliniki,Cosco,Clearship,ROW,2900.0,NH → Thessoliniki
+2026-04-28,Africa,South Africa,Tihi,Durban,Maersk,Hind Freight,ROW,1350.0,Tihi → Durban
+2026-04-29,Europe,Lithuania,NH,Klaipeda,Cosco,Clearship,ROW,2295.0,NH → Klaipeda
+2026-04-30,S.A.,Panama,NH,Colon Free Zone,Maersk,Sanjay Forwarder,ROW,2735.0,NH → Colon Free Zone
+2026-05-08,Africa,Egypt,NH,Said,Maersk,Navio Shipping,ROW,0.0,NH → Said
+2026-05-11,MEA,Saudi Arabia,NH,Jeddah,Maersk,MM Global,ROW,0.0,NH → Jeddah
+2026-05-11,Europe,Latvia,NH,Riga,Maersk,Marine Air,ROW,0.0,NH → Riga
+2026-05-11,Africa,South Africa,NH,Durban,MSC,DP World,ROW,0.0,NH → Durban
+2026-05-12,Europe,Croatia,NH,Rijeka,CMA,Cargo Partner,ROW,0.0,NH → Rijeka
+2026-05-12,CIS,Russia,NH,St. Petersburg,M Line,Hub & Links,ROW,0.0,NH → St. Petersburg
+2026-05-14,Africa,Tanzania,NH,Dar es Salaam,Maersk,Deugro,ROW,0.0,NH → Dar es Salaam
+2026-05-14,Africa,Uganda,NH,Dar es Salaam,Maersk,Deugro,ROW,0.0,NH → Dar es Salaam
+2026-05-14,S.A.,Panama,Tihi,Colon Free Zone,Maersk,Sanjay Forwarder,ROW,2735.0,Tihi → Colon Free Zone
+2026-05-16,Europe,Bulgaria,NH,Thessaloniki,Cosco,Fortune GLS,ROW,0.0,NH → Thessaloniki
+2026-05-16,S.A.,Paraguay,Tihi,Asuncion Port,MSC,VAARIDHI LOGISTICS,ROW,0.0,Tihi → Asuncion Port
+2026-05-16,Europe,Greece,NH,PIRAEUS,CMA,Team Global,ROW,0.0,NH → PIRAEUS
+2026-05-17,MEA,Saudi Arabia,Tihi,Jeddah,Maersk,MM Global,ROW,0.0,Tihi → Jeddah
+2026-05-21,MEA,Oman,NH,Sohar,MSC,DP World,ROW,2900.0,NH → Sohar
+2026-05-23,S.A.,Brazil,Tihi,Suape,MSC,Asia Shipping,ROW,0.0,Tihi → Suape
+2026-05-24,MEA,UAE,NH,Jebel Ali,MSC,Seven Seas,ROW,5275.0,NH → Jebel Ali
+2026-05-25,S.A.,Columbia,NH,Buenaventura,MSC,Varridhi Logistics,ROW,0.0,NH → Buenaventura
+2026-05-26,MEA,Bahrain,NH,BAHRAIN,MSC,GFL FREIGHT SERVICES ,ROW,0.0,NH → BAHRAIN
+2026-05-27,Europe,Bulgaria,NH,Thessaloniki,ONE,Fortune GLS,ROW,0.0,NH → Thessaloniki
+2026-05-28,S.A.,Columbia,Tihi,Buenaventura,MSC,Varridhi Logistics,ROW,2626.0,Tihi → Buenaventura
+2026-05-30,ISC,Nepal,,Birganj,,RKY,ROW,130000.0,
