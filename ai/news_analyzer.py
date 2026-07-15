@@ -37,6 +37,10 @@ daily_news = df.groupby(DATE_COLUMN)
 # ==========================================================
 # Analyze
 # ==========================================================
+# ==========================================================
+# Analyze
+# ==========================================================
+
 results = []
 
 for date, group in daily_news:
@@ -45,7 +49,9 @@ for date, group in daily_news:
 
     articles = ""
 
-    for i, row in enumerate(group.itertuples(), start=1):
+    MAX_ARTICLES = 5
+
+    for i, row in enumerate(group.head(MAX_ARTICLES).itertuples(), start=1):
         articles += f"{i}. {getattr(row, TITLE_COLUMN)}\n\n"
 
     prompt = NEWS_PROMPT.replace("{articles}", articles)
@@ -53,7 +59,7 @@ for date, group in daily_news:
     try:
 
         response = client.models.generate_content(
-            model="gemini-2.5-pro",
+            model="gemini-2.0-flash",
             contents=prompt
         )
 
@@ -77,18 +83,23 @@ for date, group in daily_news:
 
     except Exception as e:
 
-        print(f"✗ Failed on {date}")
+        print(f"\n✗ Failed on {date}")
+        print(type(e).__name__)
         print(e)
 
-        continue
+        raise
 
-# ==========================================================
-# Save
-# ==========================================================
+    import time
 
-risk_df = pd.DataFrame(results)
-
-risk_df.to_csv(OUTPUT_FILE, index=False)
-
-print("Done!")
-print(f"Saved {len(risk_df)} daily risk scores.")
+for attempt in range(5):
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt
+        )
+        break
+    except Exception as e:
+        print(f"Attempt {attempt + 1} failed: {e}")
+        time.sleep(10)
+else:
+    raise RuntimeError("Failed after 5 retries")
