@@ -1,7 +1,7 @@
-from google import genai
-from utils.config import GEMINI_API_KEY
+from xgboost import XGBRegressor
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+model = XGBRegressor()
 
-for model in client.models.list():
-    print(model.name)
+model.load_model("models/freight_model.json")
+
+print("Loaded successfully!")

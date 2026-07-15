@@ -7,7 +7,7 @@ import pandas as pd
 # ==========================================================
 
 INPUT_FILE = Path(
-    "data/raw/freight/ROW DASHBOARD.xlsx"
+    "C:\\Users\\user\\Desktop\\RALSON PROJECT\\PROJECTS\\ROW DASHBOARD.xlsx"
 )
 
 OUTPUT_FILE = Path(
