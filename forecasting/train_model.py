@@ -1,5 +1,4 @@
 from pathlib import Path
-import joblib
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -12,10 +11,17 @@ from sklearn.metrics import (
 from xgboost import XGBRegressor
 
 # ===========================================
-# Load Dataset
+# Paths
 # ===========================================
 
 DATA = Path("data")
+MODEL_PATH = Path("models/freight_model.json")
+
+# ===========================================
+# Load Dataset
+# ===========================================
+
+print("Loading dataset...")
 
 df = pd.read_csv(
     DATA / "processed" / "model_dataset.csv"
@@ -34,6 +40,9 @@ X = df.drop(
 
 y = df["freight_rate"]
 
+print(f"Rows: {len(df)}")
+print(f"Features: {len(X.columns)}")
+
 # ===========================================
 # Train/Test Split
 # ===========================================
@@ -49,26 +58,37 @@ X_train, X_test, y_train, y_test = train_test_split(
 # Model
 # ===========================================
 
+print("\nTraining model...")
+
 model = XGBRegressor(
     n_estimators=300,
     learning_rate=0.05,
     max_depth=5,
-    random_state=42
+    random_state=42,
+    objective="reg:squarederror"
 )
 
-model.fit(X_train, y_train)
+model.fit(
+    X_train,
+    y_train
+)
 
 # ===========================================
 # Predictions
 # ===========================================
 
-predictions = model.predict(X_test)
+predictions = model.predict(
+    X_test
+)
 
 # ===========================================
 # Metrics
 # ===========================================
 
-mae = mean_absolute_error(y_test, predictions)
+mae = mean_absolute_error(
+    y_test,
+    predictions
+)
 
 rmse = mean_squared_error(
     y_test,
@@ -80,23 +100,27 @@ r2 = r2_score(
     predictions
 )
 
-print("="*50)
+print("\n" + "=" * 50)
+print("Model Performance")
+print("=" * 50)
 
-print("MAE :", round(mae,2))
-print("RMSE:", round(rmse,2))
-print("R²  :", round(r2,3))
-
-print("="*50)
+print(f"MAE  : {mae:.2f}")
+print(f"RMSE : {rmse:.2f}")
+print(f"R²   : {r2:.4f}")
 
 # ===========================================
 # Save Model
 # ===========================================
 
-Path("models").mkdir(exist_ok=True)
-
-joblib.dump(
-    model,
-    "models/freight_model.pkl"
+MODEL_PATH.parent.mkdir(
+    exist_ok=True
 )
 
-print("Model saved.")
+model.save_model(
+    MODEL_PATH
+)
+
+print("\nModel saved successfully!")
+print(f"Saved to: {MODEL_PATH}")
+
+print("=" * 50)

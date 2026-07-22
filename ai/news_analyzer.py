@@ -1,42 +1,79 @@
 from pathlib import Path
 import json
+import re
+import time
 
 import pandas as pd
-from google import genai
+from ollama import chat
 
 from ai.prompts import NEWS_PROMPT
-from utils.config import GEMINI_API_KEY
+
 
 # ==========================================================
 # Configuration
 # ==========================================================
 
-client = genai.Client(api_key=GEMINI_API_KEY)
-
 INPUT_FILE = Path("data/external/news/shipping_news.csv")
 OUTPUT_FILE = Path("data/processed/news_risk_scores.csv")
 
-OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+MODEL = "qwen3:8b"
 
+OUTPUT_FILE.parent.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 # ==========================================================
 # Load News
 # ==========================================================
 
+print("Loading news...")
+
 df = pd.read_csv(INPUT_FILE)
 
-# Change these if your CSV has different column names
 DATE_COLUMN = "seendate"
 TITLE_COLUMN = "title"
 
-df[DATE_COLUMN] = pd.to_datetime(df[DATE_COLUMN]).dt.date
+df[DATE_COLUMN] = pd.to_datetime(
+    df[DATE_COLUMN]
+).dt.date
 
 daily_news = df.groupby(DATE_COLUMN)
 
 
 # ==========================================================
-# Analyze
+# JSON Cleaner
 # ==========================================================
+
+def clean_json(text):
+
+    text = (
+        text.replace("```json", "")
+            .replace("```", "")
+            .strip()
+    )
+
+    # remove <think>...</think> blocks if present
+    text = re.sub(
+        r"<think>.*?</think>",
+        "",
+        text,
+        flags=re.DOTALL
+    )
+
+    # extract first JSON object
+    match = re.search(
+        r"\{.*\}",
+        text,
+        flags=re.DOTALL
+    )
+
+    if match:
+        return match.group(0)
+
+    return text
+
+
 # ==========================================================
 # Analyze
 # ==========================================================
@@ -45,61 +82,94 @@ results = []
 
 for date, group in daily_news:
 
-    print(f"Analyzing {date}")
+    print(f"\nAnalyzing {date}")
 
     articles = ""
 
-    MAX_ARTICLES = 5
+    for i, row in enumerate(
+        group.head(5).itertuples(),
+        start=1
+    ):
 
-    for i, row in enumerate(group.head(MAX_ARTICLES).itertuples(), start=1):
-        articles += f"{i}. {getattr(row, TITLE_COLUMN)}\n\n"
-
-    prompt = NEWS_PROMPT.replace("{articles}", articles)
-
-    try:
-
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents=prompt
+        articles += (
+            f"{i}. "
+            f"{getattr(row, TITLE_COLUMN)}\n\n"
         )
 
-        text = response.text.strip()
+    prompt = NEWS_PROMPT.replace(
+        "{articles}",
+        articles
+    )
 
-        # Remove markdown if Gemini returns it
-        if text.startswith("```"):
-            text = (
-                text.replace("```json", "")
-                    .replace("```", "")
-                    .strip()
+    success = False
+
+    for attempt in range(3):
+
+        try:
+
+            response = chat(
+
+                model=MODEL,
+
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+
+                options={
+                    "temperature": 0
+                }
+
             )
 
-        risk = json.loads(text)
+            text = response["message"]["content"]
 
-        risk["date"] = str(date)
+            text = clean_json(text)
 
-        results.append(risk)
+            risk = json.loads(text)
 
-        print("✓ Success")
+            risk["date"] = str(date)
 
-    except Exception as e:
+            results.append(risk)
 
-        print(f"\n✗ Failed on {date}")
-        print(type(e).__name__)
-        print(e)
+            print("✓ Success")
 
-        raise
+            success = True
 
-    import time
+            break
 
-for attempt in range(5):
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents=prompt
+        except Exception as e:
+
+            print(
+                f"Attempt {attempt+1} failed"
+            )
+
+            print(e)
+
+            time.sleep(2)
+
+    if not success:
+
+        print(
+            f"Skipping {date}"
         )
-        break
-    except Exception as e:
-        print(f"Attempt {attempt + 1} failed: {e}")
-        time.sleep(10)
-else:
-    raise RuntimeError("Failed after 5 retries")
+
+
+# ==========================================================
+# Save
+# ==========================================================
+
+output = pd.DataFrame(results)
+
+output.to_csv(
+    OUTPUT_FILE,
+    index=False
+)
+
+print("\n" + "="*60)
+print("News analysis complete")
+print(f"Saved to: {OUTPUT_FILE}")
+print(f"Rows: {len(output)}")
+print("="*60)
